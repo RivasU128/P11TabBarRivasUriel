@@ -18,6 +18,12 @@ samples, guidance on mobile development, and a full API reference.
 ![image](https://github.com/RivasU128/P11TabBarRivasUriel/assets/143743974/da2f5e03-819d-4fe2-93f2-e4c2cc3e3d95)
 ![image](https://github.com/RivasU128/P11TabBarRivasUriel/assets/143743974/facdee8a-c770-4507-8cb1-a3b4fd42d126)
 ![image](https://github.com/RivasU128/P11TabBarRivasUriel/assets/143743974/a135771e-dfaa-4947-803f-ca054c47f24e)
+https://codesinsider.com/flutter-appbar-example-tutorial/?expand_article=1
+https://codesinsider.com/flutter-tabbar-tabbarview-example-tutorial/?expand_article=1
+
+https://blog.logrocket.com/flutter-tabbar-a-complete-tutorial-with-examples/
+
+https://www.freecodecamp.org/news/navigation-in-flutter/
 
 
 
