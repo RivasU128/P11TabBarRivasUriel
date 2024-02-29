@@ -1,43 +1,81 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(AppMiTabBar());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class AppMiTabBar extends StatelessWidget {
+  const AppMiTabBar({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: true,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      title: "Ejemplo TabBar Uriel Rivas",
+      theme: ThemeData(primarySwatch: Colors.amber),
+      home: MiPaginaInicial(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
+class MiPaginaInicial extends StatefulWidget {
+  const MiPaginaInicial({Key? key}) : super(key: key);
 
   @override
+  State<MiPaginaInicial> createState() => _MiPaginaInicialState();
+}
+
+class _MiPaginaInicialState extends State<MiPaginaInicial> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
-    );
+    return DefaultTabController(
+        length: 4,
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text("TabBar Rivas Mireles"),
+            centerTitle: true,
+            bottom: TabBar(tabs: [
+              Tab(
+                text: "Ferreteria",
+                icon: Icon(Icons.home),
+              ),
+              Tab(
+                text: "Ferreteria",
+                icon: Icon(Icons.abc),
+              ),
+              Tab(
+                text: "Ferreteria",
+                icon: Icon(Icons.ac_unit),
+              ),
+              Tab(
+                text: "Ferreteria",
+                icon: Icon(Icons.cake_sharp),
+              )
+            ]),
+          ),
+          body: TabBarView(children: const <Widget>[
+            Center(
+              child: Text(
+                "Chivas rebaño",
+                style: TextStyle(fontStyle: FontStyle.italic),
+              ),
+            ),
+            Center(
+              child: Text(
+                "America jotos",
+                style: TextStyle(fontStyle: FontStyle.italic),
+              ),
+            ),
+            Center(
+              child: Text(
+                "Cu Cu pumas",
+                style: TextStyle(fontStyle: FontStyle.italic),
+              ),
+            ),
+            Center(
+                child: Text(
+              "Cemen cemento azul",
+              style: TextStyle(fontStyle: FontStyle.italic),
+            ))
+          ]),
+        ));
   }
 }
